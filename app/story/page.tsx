@@ -5,40 +5,40 @@ import { ArrowRight } from "lucide-react"
 
 const timelineEvents = [
   {
-    year: "2015",
-    title: "Started Learning Web Development",
-    description:
-      "Discovered my passion for web development through online courses and tutorials. Built my first website and fell in love with creating digital experiences.",
-  },
-  {
-    year: "2016",
-    title: "First Freelance Projects",
-    description:
-      "Took on my first freelance projects while learning. Realized that freelancing could be a viable career path with the right approach and dedication.",
-  },
-  {
-    year: "2018",
-    title: "Full-Time Freelancing",
-    description:
-      "Made the leap to full-time freelancing. It was challenging at first, but building a consistent client base made all the difference.",
-  },
-  {
     year: "2020",
-    title: "Started Creating Content",
+    title: "First AI Freelancing Project",
     description:
-      "Began sharing my knowledge through blog posts and tutorials. Realized that teaching others accelerated my own learning and opened new opportunities.",
+      "Took on my first freelancing project in Artificial Intelligence, marking the beginning of my journey in tech and discovering my passion for AI/ML.",
   },
   {
     year: "2022",
-    title: "Founded GrowWithSaad",
+    title: "AI/ML Engineer at PMS Solutions",
     description:
-      "Created GrowWithSaad as a platform to help aspiring freelancers and tech enthusiasts build sustainable careers. It became my mission to share what I learned.",
+      "Started my career as an AI/ML Engineer at PMS Solutions, diving deep into machine learning and data analytics while pursuing my degree.",
+  },
+  {
+    year: "2023",
+    title: "Data Analyst at KAZ Technologies",
+    description:
+      "Advanced to a Data Analyst role at KAZ Technologies, expanding my expertise in data analysis and business intelligence solutions.",
   },
   {
     year: "2024",
-    title: "Helping Thousands",
+    title: "Bachelor's in Data Science",
     description:
-      "Today, GrowWithSaad helps thousands of people learn freelancing, tech, and business skills. The journey continues, and the best is yet to come.",
+      "Earned my Bachelor's degree in Data Science, solidifying my foundation in data analytics and machine learning.",
+  },
+  {
+    year: "2025",
+    title: "Tech Lead at Pangea Global Enterprises",
+    description:
+      "Promoted to Tech Lead at Pangea Global Enterprises, leading technical teams and driving innovation in AI/ML projects.",
+  },
+  {
+    year: "2025",
+    title: "Left Corporate & Founded GrowWithSaad",
+    description:
+      "After 9 months as Tech Lead, decided to leave the corporate race to pursue full-time freelancing and build my own startup. Created GrowWithSaad with the belief that if I am learning, others should too.",
   },
 ]
 
@@ -59,18 +59,13 @@ export default function StoryPage() {
         <section className="px-4 sm:px-6 lg:px-8 py-16 border-b border-border max-w-4xl mx-auto">
           <div className="space-y-6 text-foreground/70 leading-relaxed">
             <p>
-              My journey into freelancing and tech education wasn't a straight path. It was filled with experiments,
-              failures, and valuable lessons that shaped who I am today.
+              My journey into AI, freelancing, and tech education has been an exciting adventure from corporate success to entrepreneurial freedom.
             </p>
             <p>
-              I started as someone who was curious about web development, just like many of you. I didn't have a
-              Computer Science degree or come from a tech family. I learned through determination, practice, and a
-              genuine passion for creating things.
+              Starting with my first AI freelancing project in 2020, I discovered my passion for artificial intelligence and machine learning. This led me through various roles in the corporate world, from AI/ML Engineer to Tech Lead.
             </p>
             <p>
-              Over the years, I've gone from struggling to find my first clients to building a thriving freelance
-              career. More importantly, I've learned what actually works and what doesn't—and I'm excited to share that
-              with you.
+              But the entrepreneurial spirit called, and I realized that if I'm learning and growing, others should have the same opportunity. That's what drove me to leave the corporate race and create GrowWithSaad—a platform where I share coding and freelancing knowledge to help beginners grow in tech.
             </p>
           </div>
         </section>
@@ -143,19 +138,18 @@ export default function StoryPage() {
           </div>
         </section>
 
-        {/* CTA */}
+        {/* Coming Soon Section */}
         <section className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16 border-t border-border">
           <div className="text-center space-y-6">
-            <h2 className="text-3xl font-bold">Ready to Start Your Journey?</h2>
+            <h2 className="text-3xl font-bold">More Coming Soon</h2>
             <p className="text-lg text-foreground/60 leading-relaxed">
-              Whether you're just starting or looking to level up your freelancing and tech skills, I'm here to help.
-              Let's connect and explore how I can support your goals.
+              I'm working on exciting content and resources to help you grow in tech and freelancing. Stay connected for updates!
             </p>
             <Link
               href="/contact"
               className="inline-flex items-center justify-center px-6 py-3 rounded-lg bg-accent hover:bg-accent/90 text-accent-foreground font-medium transition-colors"
             >
-              Get in Touch
+              Stay Connected
               <ArrowRight className="w-4 h-4 ml-2" />
             </Link>
           </div>
