@@ -1,19 +1,8 @@
 import { Navbar } from "@/components/navbar"
 import { Footer } from "@/components/footer"
-import { getAllBlogSlugs, getBlogPost } from "@/lib/blog-utils"
-import { BlogsClient } from "@/components/blogs-client"
-
-function getAllBlogPosts() {
-  const slugs = getAllBlogSlugs()
-  return slugs.map(slug => {
-    const post = getBlogPost(slug)
-    if (!post) return null
-    return post
-  }).filter(Boolean)
-}
+import Link from "next/link"
 
 export default function BlogsPage() {
-  const blogPosts = getAllBlogPosts()
   return (
     <>
       <Navbar />
@@ -28,7 +17,23 @@ export default function BlogsPage() {
           </div>
         </section>
 
-        <BlogsClient blogPosts={blogPosts} />
+        {/* Coming Soon Message */}
+        <section className="px-8 lg:px-16 py-32 text-center">
+          <div className="max-w-2xl mx-auto space-y-6">
+            <h2 className="text-4xl md:text-5xl font-bold text-foreground">Coming Soon</h2>
+            <p className="text-lg text-foreground/60">
+              I'm working on creating amazing content for you. Stay tuned for insightful articles on freelancing and tech!
+            </p>
+            <div className="pt-4">
+              <Link
+                href="/contact"
+                className="inline-flex items-center justify-center px-6 py-3 rounded-lg bg-accent hover:bg-accent/90 text-accent-foreground font-medium transition-colors"
+              >
+                Get Notified
+              </Link>
+            </div>
+          </div>
+        </section>
       </main>
       <Footer />
     </>
