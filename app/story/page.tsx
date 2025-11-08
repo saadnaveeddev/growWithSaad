@@ -30,15 +30,15 @@ const timelineEvents = [
   },
   {
     year: "2022",
-    title: "Founded CCG",
+    title: "Founded GrowWithSaad",
     description:
-      "Created CCG as a platform to help aspiring freelancers and tech enthusiasts build sustainable careers. It became my mission to share what I learned.",
+      "Created GrowWithSaad as a platform to help aspiring freelancers and tech enthusiasts build sustainable careers. It became my mission to share what I learned.",
   },
   {
     year: "2024",
     title: "Helping Thousands",
     description:
-      "Today, CCG helps thousands of people learn freelancing, tech, and business skills. The journey continues, and the best is yet to come.",
+      "Today, GrowWithSaad helps thousands of people learn freelancing, tech, and business skills. The journey continues, and the best is yet to come.",
   },
 ]
 
@@ -48,15 +48,15 @@ export default function StoryPage() {
       <Navbar />
       <main className="min-h-screen">
         {/* Header */}
-        <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 border-b border-border">
+        <section className="px-4 sm:px-6 lg:px-8 py-16 border-b border-border">
           <div className="space-y-4">
             <h1 className="text-4xl md:text-5xl font-bold">My Story</h1>
-            <p className="text-lg text-foreground/60">From learning to earning: The journey that led to creating CCG</p>
+            <p className="text-lg text-foreground/60">From learning to earning: The journey that led to creating GrowWithSaad</p>
           </div>
         </section>
 
         {/* Introduction */}
-        <section className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16 border-b border-border">
+        <section className="px-4 sm:px-6 lg:px-8 py-16 border-b border-border max-w-4xl mx-auto">
           <div className="space-y-6 text-foreground/70 leading-relaxed">
             <p>
               My journey into freelancing and tech education wasn't a straight path. It was filled with experiments,
@@ -76,7 +76,7 @@ export default function StoryPage() {
         </section>
 
         {/* Timeline */}
-        <section className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <section className="px-4 sm:px-6 lg:px-8 py-16 max-w-4xl mx-auto">
           <h2 className="text-3xl font-bold mb-12">My Journey</h2>
 
           <div className="space-y-12">

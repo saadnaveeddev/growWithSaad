@@ -12,44 +12,47 @@ export default function Home() {
       <Navbar />
       <main className="min-h-screen">
         {/* Hero Section */}
-        <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-32">
-          <div className="space-y-8">
-            {/* Main Heading */}
-            <div className="space-y-4 animate-fade-in-up">
-              <h1 className="text-4xl md:text-6xl font-bold text-balance">
-                Hi, I am <span className="text-accent animate-glow">Saad Naveed</span>
-              </h1>
-              <p className="text-xl md:text-2xl text-foreground/70">Tech & Freelancing Educator</p>
-            </div>
+        <section className="relative min-h-screen flex items-center bg-cover bg-center bg-no-repeat w-full" style={{ backgroundImage: 'url(/hero-background.png)', clipPath: 'polygon(0 0, 100% 0, 100% 85%, 95% 90%, 90% 85%, 85% 90%, 80% 85%, 75% 90%, 70% 85%, 65% 90%, 60% 85%, 55% 90%, 50% 85%, 45% 90%, 40% 85%, 35% 90%, 30% 85%, 25% 90%, 20% 85%, 15% 90%, 10% 85%, 5% 90%, 0 85%)' }}>
+          <div className="absolute inset-0 bg-black/10" />
+          <div className="relative z-10 w-full px-8 lg:px-16">
+            <div className="max-w-xl space-y-6">
+              {/* Main Heading */}
+              <div className="space-y-4 animate-fade-in-up">
+                <h1 className="text-5xl md:text-7xl font-bold leading-tight text-white">
+                  Hi, I am<span className="text-accent"> Saad</span>
+                </h1>
+                
+              </div>
 
-            {/* Tagline */}
-            <p className="text-lg text-foreground/60 leading-relaxed max-w-2xl animate-fade-in-up-1">
-              Learn Freelancing & Tech with CCG. I share practical insights on building a sustainable freelance career
+              {/* Tagline */}
+              <p className="text-lg text-white/80 leading-relaxed animate-fade-in-up-1">
+               Learn Freelancing & Tech with Saad Naveed. I share practical insights on building a sustainable freelance career
               and mastering modern technologies.
-            </p>
+              </p>
 
-            {/* CTA Button */}
-            <div className="flex flex-col sm:flex-row gap-4 pt-4 animate-fade-in-up-2">
-              <Link
-                href="/story"
-                className="inline-flex items-center justify-center px-6 py-3 rounded-lg bg-accent hover:bg-accent/90 text-accent-foreground font-medium transition-all hover:scale-105 hover:shadow-lg"
-              >
-                Read My Story
-                <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-              </Link>
-              <Link
-                href="/contact"
-                className="inline-flex items-center justify-center px-6 py-3 rounded-lg border border-border hover:bg-muted/50 font-medium transition-colors"
-              >
-                Get in Touch
-              </Link>
+              {/* CTA Button */}
+              <div className="flex flex-col sm:flex-row gap-4 pt-4 animate-fade-in-up-2">
+                <Link
+                  href="/story"
+                  className="inline-flex items-center justify-center px-8 py-4 rounded-lg bg-accent hover:bg-accent/90 text-accent-foreground font-medium transition-all hover:scale-105 hover:shadow-lg"
+                >
+                  Start Learning
+                  <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+                </Link>
+                <Link
+                  href="/contact"
+                  className="inline-flex items-center justify-center px-8 py-4 rounded-lg border-2 border-white/30 hover:bg-white/10 text-white font-medium transition-colors"
+                >
+                  Get in Touch
+                </Link>
+              </div>
             </div>
           </div>
         </section>
 
         {/* Pinned Articles */}
         {pinnedPosts.length > 0 && (
-          <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20 border-t border-border">
+          <section className="px-8 lg:px-16 py-20 border-t border-border">
             <div className="space-y-8">
               <div className="flex items-center gap-2">
                 <Pin className="w-5 h-5 text-accent" />
@@ -85,7 +88,7 @@ export default function Home() {
         )}
 
         {/* Featured Content Preview */}
-        <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20 border-t border-border">
+        <section className="px-8 lg:px-16 py-20 border-t border-border">
           <div className="space-y-12">
             <div>
               <h2 className="text-3xl font-bold mb-8 animate-fade-in-up">Latest Content</h2>

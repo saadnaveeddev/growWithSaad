@@ -45,7 +45,7 @@ export function Navbar() {
             href="/"
             className="text-xl font-bold text-foreground hover:text-accent transition-colors animate-fade-in"
           >
-            CCG
+            GrowWithSaad
           </Link>
 
           <div className="hidden md:flex gap-8">

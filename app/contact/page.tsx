@@ -43,7 +43,7 @@ export default function ContactPage() {
       <Navbar />
       <main className="min-h-screen">
         {/* Header */}
-        <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 border-b border-border">
+        <section className="px-4 sm:px-6 lg:px-8 py-16 border-b border-border">
           <div className="space-y-4">
             <h1 className="text-4xl md:text-5xl font-bold">Get in Touch</h1>
             <p className="text-lg text-foreground/60">
@@ -53,7 +53,7 @@ export default function ContactPage() {
         </section>
 
         {/* Content Grid */}
-        <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <section className="px-4 sm:px-6 lg:px-8 py-16 max-w-6xl mx-auto">
           <div className="grid md:grid-cols-3 gap-12">
             {/* Contact Information */}
             <div className="md:col-span-1">
@@ -65,10 +65,10 @@ export default function ContactPage() {
                     Email
                   </h3>
                   <a
-                    href="mailto:hello@ccg.com"
+                    href="mailto:hello@growwithsaad.com"
                     className="text-foreground/70 hover:text-accent transition-colors break-all"
                   >
-                    hello@ccg.com
+                    hello@growwithsaad.com
                   </a>
                 </div>
 
@@ -198,7 +198,7 @@ export default function ContactPage() {
         </section>
 
         {/* Alternative Contact Methods */}
-        <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 border-t border-border">
+        <section className="px-4 sm:px-6 lg:px-8 py-16 border-t border-border max-w-4xl mx-auto">
           <div className="bg-muted/30 rounded-lg p-8 text-center space-y-4">
             <h2 className="text-2xl font-semibold">Prefer a Different Way?</h2>
             <p className="text-foreground/60">

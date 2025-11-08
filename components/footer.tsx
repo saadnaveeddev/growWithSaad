@@ -1,4 +1,5 @@
 import Link from "next/link"
+import { Github, Linkedin, Facebook, Instagram } from "lucide-react"
 
 export function Footer() {
   const currentYear = new Date().getFullYear()
@@ -26,7 +27,23 @@ export function Footer() {
             ))}
           </div>
 
-          <p className="text-sm text-foreground/50">© {currentYear} Saad Naveed – Learn Freelance with CCG</p>
+          <div className="flex flex-col md:items-end gap-4">
+            <div className="flex gap-4">
+              <a href="https://instagram.com/_growwithsaad" target="_blank" rel="noopener noreferrer" className="text-foreground/70 hover:text-accent transition-colors">
+                <Instagram className="w-5 h-5" />
+              </a>
+              <a href="https://github.com/saadnaveeddev" target="_blank" rel="noopener noreferrer" className="text-foreground/70 hover:text-accent transition-colors">
+                <Github className="w-5 h-5" />
+              </a>
+              <a href="https://www.facebook.com/chaudharysaad.naveed" target="_blank" rel="noopener noreferrer" className="text-foreground/70 hover:text-accent transition-colors">
+                <Facebook className="w-5 h-5" />
+              </a>
+              <a href="https://linkedin.com/in/saadnaveeddev" target="_blank" rel="noopener noreferrer" className="text-foreground/70 hover:text-accent transition-colors">
+                <Linkedin className="w-5 h-5" />
+              </a>
+            </div>
+            <p className="text-sm text-foreground/50">© {currentYear} Saad Naveed – GrowWithSaad</p>
+          </div>
         </div>
       </div>
     </footer>
