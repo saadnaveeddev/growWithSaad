@@ -18,7 +18,7 @@ export function getBlogPost(slug: string): BlogPost | null {
     const content = fs.readFileSync(filePath, "utf-8")
 
     // Parse frontmatter
-    const frontmatterRegex = /^---\n([\s\S]*?)\n---/
+    const frontmatterRegex = /^---\s*\n([\s\S]*?)\n---\s*\n/
     const match = content.match(frontmatterRegex)
 
     if (!match) return null
@@ -26,11 +26,15 @@ export function getBlogPost(slug: string): BlogPost | null {
     const frontmatter = match[1]
     const body = content.replace(frontmatterRegex, "").trim()
 
-    const metadata: Record<string, string> = {}
+    const metadata: Record<string, any> = {}
     frontmatter.split("\n").forEach((line) => {
-      const [key, value] = line.split(": ")
-      if (key && value) {
-        metadata[key.trim()] = value.trim().replace(/^['"]|['"]$/g, "")
+      const colonIndex = line.indexOf(': ')
+      if (colonIndex > 0) {
+        const key = line.substring(0, colonIndex).trim()
+        const value = line.substring(colonIndex + 2).trim().replace(/^['"]|['"]$/g, "")
+        if (key && value) {
+          metadata[key] = value === 'true' ? true : value === 'false' ? false : value
+        }
       }
     })
 
@@ -40,7 +44,7 @@ export function getBlogPost(slug: string): BlogPost | null {
       date: metadata.date || "",
       category: metadata.category || "",
       content: body,
-      pinned: metadata.pinned === "true",
+      pinned: metadata.pinned === true,
     }
   } catch {
     return null
