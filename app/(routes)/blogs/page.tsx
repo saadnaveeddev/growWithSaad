@@ -1,5 +1,5 @@
-import { Navbar } from "@/components/navbar"
-import { Footer } from "@/components/footer"
+import { Navbar } from "@/components/layout/navbar"
+import { Footer } from "@/components/layout/footer"
 import Link from "next/link"
 import { getAllBlogSlugs, getBlogPost } from "@/lib/blog-utils"
 
@@ -9,15 +9,16 @@ export default function BlogsPage() {
     .map(slug => getBlogPost(slug))
     .filter(post => post !== null)
     .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
+
   return (
     <>
       <Navbar />
       <main className="min-h-screen">
         {/* Header */}
-        <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 border-b border-border">
-          <div className="space-y-4">
-            <h1 className="text-4xl md:text-5xl font-bold">Articles & Insights</h1>
-            <p className="text-lg text-foreground/60">
+        <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 border-b border-border">
+          <div className="space-y-3 sm:space-y-4">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold">Articles & Insights</h1>
+            <p className="text-base sm:text-lg text-foreground/60">
               Practical insights on freelancing, tech, and building a sustainable career.
             </p>
           </div>
