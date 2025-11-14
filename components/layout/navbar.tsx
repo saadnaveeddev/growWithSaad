@@ -1,5 +1,6 @@
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
+import { ThemeToggle } from "./theme-toggle"
 
 export function Navbar() {
   return (
@@ -20,15 +21,19 @@ export function Navbar() {
             <Link href="/blogs" className="text-foreground/60 hover:text-foreground transition-colors">
               Blogs
             </Link>
-            <Link href="/contact">
-              <Button variant="default" size="sm">
-                Contact
-              </Button>
-            </Link>
+            <div className="flex items-center space-x-2">
+              <ThemeToggle />
+              <Link href="/contact">
+                <Button variant="default" size="sm">
+                  Contact
+                </Button>
+              </Link>
+            </div>
           </div>
           
-          {/* Mobile menu button */}
-          <div className="md:hidden">
+          {/* Mobile menu */}
+          <div className="md:hidden flex items-center space-x-2">
+            <ThemeToggle />
             <Link href="/contact">
               <Button variant="default" size="sm">
                 Contact
