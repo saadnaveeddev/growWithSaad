@@ -1,4 +1,5 @@
 import Link from "next/link"
+import { SocialLinks } from "./social-links"
 
 export function Footer() {
   return (
@@ -38,10 +39,11 @@ export function Footer() {
           
           <div className="space-y-4">
             <h4 className="font-semibold">Connect</h4>
-            <div className="space-y-2">
+            <div className="space-y-4">
               <Link href="/contact" className="block text-sm text-foreground/60 hover:text-foreground transition-colors">
                 Contact
               </Link>
+              <SocialLinks />
             </div>
           </div>
         </div>
